@@ -1,5 +1,4 @@
 # A single thread file downloader
-
 import requests
 import os
 
@@ -23,9 +22,9 @@ else:
 		else:
 			break
 
-
 with open(f_name,"wb") as f:
 	for chunk in r.iter_content(chunk_size=1024):
 		if chunk:	
 			f.write(chunk)
+
 print('File downloaded :)')
